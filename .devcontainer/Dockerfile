@@ -27,7 +27,10 @@ RUN docker-php-ext-install \
     soap \
     xsl \
     bcmath \
-    sockets
+    sockets \
+    gd \
+    mbstring \
+    simplexml 
 
 RUN a2enmod rewrite
 
