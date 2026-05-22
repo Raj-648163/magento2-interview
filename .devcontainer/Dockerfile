@@ -1,5 +1,7 @@
 FROM php:8.2-apache
 
+ENV APACHE_DOCUMENT_ROOT /var/www/html/pub
+
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
