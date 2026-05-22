@@ -11,26 +11,17 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libxslt1-dev \
     libpng-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
-    libonig-dev
+    libjpeg-dev \
+    libfreetype6-dev
 
 RUN docker-php-ext-install \
-    bcmath \
-    ctype \
-    curl \
-    dom \
-    fileinfo \
-    gd \
-    intl \
-    mbstring \
-    opcache \
     pdo_mysql \
-    simplexml \
+    intl \
+    zip \
     soap \
-    sockets \
     xsl \
-    zip
+    bcmath \
+    sockets
 
 RUN a2enmod rewrite
 
