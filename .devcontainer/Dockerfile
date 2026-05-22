@@ -16,6 +16,10 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev
 
+RUN docker-php-ext-configure gd \
+    --with-freetype \
+    --with-jpeg
+    
 RUN docker-php-ext-install \
     pdo_mysql \
     intl \
