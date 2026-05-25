@@ -9,6 +9,8 @@
 
   "forwardPorts": [8080],
 
+  "postCreateCommand": "bash /workspaces/magento2-interview/setup.sh 2>&1 | tee /tmp/magento-setup.log",
+
   "customizations": {
     "vscode": {
       "extensions": [

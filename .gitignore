@@ -12,3 +12,6 @@ src/app/etc/env.php
 .DS_Store
 .idea/
 *.swp
+
+# Setup log
+/tmp/magento-setup.log
