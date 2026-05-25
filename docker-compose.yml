@@ -15,6 +15,7 @@ services:
 
     depends_on:
       - db
+      - opensearch
 
   db:
     image: mariadb:10.6
@@ -27,4 +28,15 @@ services:
 
     ports:
       - "3306:3306"
+
+  opensearch:
+    image: opensearchproject/opensearch:2.12.0
+
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+
+    ports:
+      - "9200:9200"
 

@@ -1,0 +1,14 @@
+# Magento generated/runtime directories
+src/vendor/
+src/var/
+src/generated/
+src/pub/static/
+src/pub/media/
+
+# Magento env config (contains DB credentials & keys)
+src/app/etc/env.php
+
+# OS / IDE
+.DS_Store
+.idea/
+*.swp
